@@ -6,3 +6,7 @@
   <li>Poketype: <%= @pokemon.poke_type %></li>
   <li>CP: <%= @pokemon.cp %>
 </ul>
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
+<input name="_method" type="hidden" value="delete">
+<input type="submit" value="Delete">
+</form>
