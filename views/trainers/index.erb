@@ -1,0 +1,7 @@
+<h1>All Trainers</h1>
+<ul>
+  <% @trainers.each do |trainer| %>
+  <li><a href="/trainers/<%= trainer.id %>"><%= trainer.name %></a></li>
+  <% end %>
+</ul>
+<a href="/trainers/new">Create new pokemon</a>

@@ -4,6 +4,12 @@ require 'active_record'
 
 require_relative 'db/connection'
 require_relative 'models/pokemon'
+require_relative 'models/trainer'
+
+get '/trainers' do
+  @trainers = Trainer.all
+  erb :'trainers/index'
+end
 
 get '/pokemons' do
   @pokemons = Pokemon.all
